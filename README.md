@@ -1,7 +1,5 @@
-**SOFTWARE ENGINEER PYTHON TEST - REST API**
+**SOFTWARE ENGINEER PYTHON TEST - REST API Documentation**
 ----
-
-# RESTAPI Documentation
 
 This project was built using Flask where I created a REST endpoint that will return the sum of a list of numbers e.g. [1,2,3] => 1+2+3 = 6
 
