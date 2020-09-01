@@ -3,6 +3,7 @@ import json
 
 from app import app
 from config import basedir, TestingConfig
+from app.routes import sum_list
 
 class FlaskApiTest(unittest.TestCase):
     
@@ -14,7 +15,7 @@ class FlaskApiTest(unittest.TestCase):
     def setUp(self):
         app.config.from_object(TestingConfig)
         self.app = app.test_client()
-        self.number_list = [1, 2, 3]
+        self.list1 = [1, 2, 3]
         self.empty_number_list = []
 
     # executed after each test
@@ -40,9 +41,9 @@ class FlaskApiTest(unittest.TestCase):
     #     """
     #     Test sum_list route returns an error message if the provided list is empty
     #     """
-    #     response = self.app.get('/total')
-    #     self.assertIn(b'List provided is empty', response.data)
-    #     print(response.data)
+    #     result = sum_list(self.list1)
+    #     print(type(result))
+    #     self.assertIn(b'List provided is empty', result)
 
     def test_sum_list_returns_correct_format(self):
         """

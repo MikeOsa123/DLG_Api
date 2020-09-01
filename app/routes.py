@@ -2,6 +2,9 @@ from flask import jsonify, request
 
 from app import app
 
+# hard coded a list of numbers to mock list provided from a backend service
+numbers_to_add = list(range(10000001))
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -11,12 +14,12 @@ def index():
 @app.route('/total')
 def sum_list(*args):
     if args:
-        print("present")
+        print("List provided")
     else:
-        numbers_to_add = list(range(10000001))
+        args = numbers_to_add
     
-    if len(numbers_to_add) == 0:
+    if len(args) == 0:
         return "List provided is empty"
     else:
-        list_sum = sum(numbers_to_add)
+        list_sum = sum(args)
         return jsonify(total=list_sum)
