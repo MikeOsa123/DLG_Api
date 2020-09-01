@@ -13,7 +13,7 @@ This project was built using Flask where I created a REST endpoint that will ret
 
 Open endpoints require no Authentication.
 
-* [Total](total.md) : `GET /total/`
+* [Total](Total.md) : `GET /total/`
 
 ### Assumptions
 
