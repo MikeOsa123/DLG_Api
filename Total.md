@@ -1,6 +1,6 @@
 # Total
 
-Used to collect a Token for a registered User.
+Total endpoint that takes a list from the backend and sums up the numbers in that list.
 
 **URL** : `/api/login/`
 
@@ -19,14 +19,6 @@ Used to collect a Token for a registered User.
 ## Success Response
 
 **Code** : `200 OK`
-
-**Content example**
-
-```json
-{
-    "token": "93144b288eb1fdccbe46d6fc0f241a51766ecd3d"
-}
-```
 
 ## Error Response
 
